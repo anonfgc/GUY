@@ -1021,6 +1021,12 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
 {
     
           int64_t nSubsidy = 1 * COIN;
+		if(pindexBest->nHeight > 1500) {
+        nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
+    } else {
+         nSubsidy = 1 * COIN;
+}
+
           
    
     LogPrint("creation", "GetProofOfStakeReward(): create=%s nCoinAge=%d\n", FormatMoney(nSubsidy), nCoinAge);
