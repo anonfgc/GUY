@@ -26,7 +26,7 @@ cd /usr/local
 file=/usr/local/GUYX
 if [ ! -e "$file" ]
 then
-        sudo git clone https://github.com/GUYproject/GUYX.git
+        sudo git clone https://github.com/sigtproject/GUYX.git
 fi
 
 cd /usr/local/GUYX/src
